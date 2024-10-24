@@ -60,8 +60,12 @@ const liss = document.getElementsByClassName("li_nav"); //
 // quiero que al darle clic a los menus de mi barra superior de menus, me lancen un alert saludandome
 
 for (let el of document.getElementsByClassName("header_nav")) {
-    el.addEventListener("click", function() {
-        alert("Hola");
+    el.addEventListener("click", function(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        console.log(event)
+        // event.target.classList.add("cambioColor")
+        // event.target.style.color = 'yellow';
     });
 }
 
