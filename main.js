@@ -1,6 +1,10 @@
 console.log(window, 'window'); // navegador
 console.log(document, 'document'); // navegador
 
+
+function saluda() {
+    alert('hola');
+}
 // getElementById -> elemento  "navegacion_header" 
 // getElementsByClassName -> elementos "li_nav" "footer_nav" "navegacion_header" HTMLCollection
 // getElementsByTagName -> elementos "navegacion_header"
@@ -41,12 +45,23 @@ const liss = document.getElementsByClassName("li_nav"); //
 // navEl.innerHTML = "<p>hola mundo</p>";
 // navEl.innerHTML = "hola mundo";
 
-const nuevoElemento = document.createElement("li");
-console.log(nuevoElemento)
-nuevoElemento.textContent = "News";
-console.log(nuevoElemento)
+// const nuevoElemento = document.createElement("li");
+// console.log(nuevoElemento)
+// nuevoElemento.textContent = "News";
+// console.log(nuevoElemento)
 
 
-const ul = navEl.querySelector("ul");
-ul.append(nuevoElemento, "soy pedro")
-navEl.appendChild(nuevoElemento);
+// const ul = navEl.querySelector("ul");
+// ul.append(nuevoElemento, "soy pedro")
+// navEl.appendChild(nuevoElemento);
+
+// addEventListener(evento, function() {});
+
+// quiero que al darle clic a los menus de mi barra superior de menus, me lancen un alert saludandome
+
+for (let el of document.getElementsByClassName("header_nav")) {
+    el.addEventListener("click", function() {
+        alert("Hola");
+    });
+}
+
